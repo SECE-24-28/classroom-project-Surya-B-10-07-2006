@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mock API – Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="max-w-2xl mx-auto mt-10 bg-white p-6 rounded-xl shadow">
+    <h1 class="text-2xl font-bold text-center mb-4">📡 Mock API Data</h1>
+
+    <button id="loadBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+      Load Plans from Mock API
+    </button>
+
+    <div id="results" class="mt-6 space-y-4"></div>
+  </div>
+
+  <script>
+    document.getElementById("loadBtn").addEventListener("click", () => {
+
+      fetch("https://mockapi.io/projects/demo123/plans") 
+        .then(res => res.json())
+        .then(data => {
+          const output = document.getElementById("results");
+          output.innerHTML = "";
+
+          data.forEach(plan => {
+            output.innerHTML += `
+              <div class="border p-4 rounded-lg shadow-sm bg-gray-50">
+                <h3 class="font-semibold text-lg">₹${plan.amount}</h3>
+                <p class="text-gray-600">Validity: ${plan.validity}</p>
+                <p class="text-gray-500 text-sm">${plan.details}</p>
+              </div>
+            `;
+          });
+        })
+        .catch(() => alert("API Error! Check URL"));
+    });
+  </script>
+
+</body>
+</html>

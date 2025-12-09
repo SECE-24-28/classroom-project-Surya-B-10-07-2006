@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOBZ – Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white py-4 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">📱 MOBZ</h1>
+
+      <div class="flex gap-6">
+        <a href="dashboard.html" class="hover:text-yellow-300">Dashboard</a>
+        <a href="recharge.html" class="hover:text-yellow-300">Recharge</a>
+        <a href="profile.html" class="hover:text-yellow-300">Profile</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Card -->
+  <section class="max-w-lg mx-auto bg-white mt-10 p-8 shadow rounded-xl">
+
+    <div class="text-center">
+      <div class="w-20 h-20 bg-blue-600 text-white flex items-center justify-center rounded-full mx-auto text-2xl font-bold">
+        S
+      </div>
+      <h2 class="text-xl font-bold mt-3">Surya</h2>
+      <p class="text-gray-600 text-sm">demo@mobz.com</p>
+    </div>
+
+    <div class="mt-8 space-y-4">
+
+      <div>
+        <label class="font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Surya" 
+          class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"/>
+      </div>
+
+      <div>
+        <label class="font-semibold text-gray-600">Phone Number</label>
+        <input type="text" value="9876543210" 
+          class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"/>
+      </div>
+
+      <div>
+        <label class="font-semibold text-gray-600">Email</label>
+        <input type="email" value="demo@mobz.com" 
+          class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"/>
+      </div>
+
+      <button class="mt-4 bg-blue-600 text-white w-full py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+        Save Changes
+      </button>
+    </div>
+
+  </section>
+
+</body>
+</html>
